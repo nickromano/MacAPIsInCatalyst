@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,33 @@
 		C391D67324A17BD4006B7F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391D67124A17BD4006B7F95 /* Main.storyboard */; };
 		C391D67524A17BD6006B7F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391D67424A17BD6006B7F95 /* Assets.xcassets */; };
 		C391D67824A17BD6006B7F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391D67624A17BD6006B7F95 /* LaunchScreen.storyboard */; };
+		C391D68C24A17E43006B7F95 /* MacBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C391D68B24A17E43006B7F95 /* MacBundle.m */; };
+		C391D68E24A17EF5006B7F95 /* MacBundle.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = C391D68424A17C04006B7F95 /* MacBundle.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C391D68F24A17EF5006B7F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C391D66024A17BD4006B7F95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C391D68324A17C04006B7F95;
+			remoteInfo = MacBundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C391D69124A17EF5006B7F95 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C391D68E24A17EF5006B7F95 /* MacBundle.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C391D66824A17BD4006B7F95 /* MacAPIsInCatalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAPIsInCatalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +50,22 @@
 		C391D67424A17BD6006B7F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391D67724A17BD6006B7F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C391D67924A17BD6006B7F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C391D67F24A17BDE006B7F95 /* MacAPIsInCatalyst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacAPIsInCatalyst.entitlements; sourceTree = "<group>"; };
+		C391D68424A17C04006B7F95 /* MacBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C391D68624A17C04006B7F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C391D68A24A17E43006B7F95 /* MacBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacBundle.h; sourceTree = "<group>"; };
+		C391D68B24A17E43006B7F95 /* MacBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBundle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C391D66524A17BD4006B7F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C391D68124A17C04006B7F95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				C391D66A24A17BD4006B7F95 /* MacAPIsInCatalyst */,
+				C391D68524A17C04006B7F95 /* MacBundle */,
 				C391D66924A17BD4006B7F95 /* Products */,
+				C391D68D24A17EF5006B7F95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				C391D66824A17BD4006B7F95 /* MacAPIsInCatalyst.app */,
+				C391D68424A17C04006B7F95 /* MacBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +97,7 @@
 		C391D66A24A17BD4006B7F95 /* MacAPIsInCatalyst */ = {
 			isa = PBXGroup;
 			children = (
+				C391D67F24A17BDE006B7F95 /* MacAPIsInCatalyst.entitlements */,
 				C391D66B24A17BD4006B7F95 /* AppDelegate.swift */,
 				C391D66D24A17BD4006B7F95 /* SceneDelegate.swift */,
 				C391D66F24A17BD4006B7F95 /* ViewController.swift */,
@@ -65,6 +107,23 @@
 				C391D67924A17BD6006B7F95 /* Info.plist */,
 			);
 			path = MacAPIsInCatalyst;
+			sourceTree = "<group>";
+		};
+		C391D68524A17C04006B7F95 /* MacBundle */ = {
+			isa = PBXGroup;
+			children = (
+				C391D68624A17C04006B7F95 /* Info.plist */,
+				C391D68A24A17E43006B7F95 /* MacBundle.h */,
+				C391D68B24A17E43006B7F95 /* MacBundle.m */,
+			);
+			path = MacBundle;
+			sourceTree = "<group>";
+		};
+		C391D68D24A17EF5006B7F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +136,34 @@
 				C391D66424A17BD4006B7F95 /* Sources */,
 				C391D66524A17BD4006B7F95 /* Frameworks */,
 				C391D66624A17BD4006B7F95 /* Resources */,
+				C391D69124A17EF5006B7F95 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C391D69024A17EF5006B7F95 /* PBXTargetDependency */,
 			);
 			name = MacAPIsInCatalyst;
 			productName = MacAPIsInCatalyst;
 			productReference = C391D66824A17BD4006B7F95 /* MacAPIsInCatalyst.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C391D68324A17C04006B7F95 /* MacBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C391D68724A17C04006B7F95 /* Build configuration list for PBXNativeTarget "MacBundle" */;
+			buildPhases = (
+				C391D68024A17C04006B7F95 /* Sources */,
+				C391D68124A17C04006B7F95 /* Frameworks */,
+				C391D68224A17C04006B7F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacBundle;
+			productName = MacBundle;
+			productReference = C391D68424A17C04006B7F95 /* MacBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +176,9 @@
 				ORGANIZATIONNAME = "Ten Minute Wait";
 				TargetAttributes = {
 					C391D66724A17BD4006B7F95 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					C391D68324A17C04006B7F95 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -116,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				C391D66724A17BD4006B7F95 /* MacAPIsInCatalyst */,
+				C391D68324A17C04006B7F95 /* MacBundle */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +210,13 @@
 				C391D67824A17BD6006B7F95 /* LaunchScreen.storyboard in Resources */,
 				C391D67524A17BD6006B7F95 /* Assets.xcassets in Resources */,
 				C391D67324A17BD4006B7F95 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C391D68224A17C04006B7F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +233,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C391D68024A17C04006B7F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C391D68C24A17E43006B7F95 /* MacBundle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C391D69024A17EF5006B7F95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = maccatalyst;
+			target = C391D68324A17C04006B7F95 /* MacBundle */;
+			targetProxy = C391D68F24A17EF5006B7F95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C391D67124A17BD4006B7F95 /* Main.storyboard */ = {
@@ -284,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacAPIsInCatalyst/MacAPIsInCatalyst.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4337ZFV4M9;
 				INFOPLIST_FILE = MacAPIsInCatalyst/Info.plist;
@@ -293,6 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tenminutewait.MacAPIsInCatalyst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacAPIsInCatalyst/MacAPIsInCatalyst.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4337ZFV4M9;
 				INFOPLIST_FILE = MacAPIsInCatalyst/Info.plist;
@@ -311,8 +420,43 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tenminutewait.MacAPIsInCatalyst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C391D68824A17C04006B7F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4337ZFV4M9;
+				INFOPLIST_FILE = MacBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tenminutewait.MacBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C391D68924A17C04006B7F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4337ZFV4M9;
+				INFOPLIST_FILE = MacBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tenminutewait.MacBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -333,6 +477,15 @@
 			buildConfigurations = (
 				C391D67D24A17BD6006B7F95 /* Debug */,
 				C391D67E24A17BD6006B7F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C391D68724A17C04006B7F95 /* Build configuration list for PBXNativeTarget "MacBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C391D68824A17C04006B7F95 /* Debug */,
+				C391D68924A17C04006B7F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
